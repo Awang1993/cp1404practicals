@@ -18,6 +18,7 @@ def main():
 
 
 def generate_income_report(number_of_months, incomes):
+    """Generates income report from user input and formats output string"""
     print("\nIncome Report\n-------------")
     total = 0
     for month in range(1, number_of_months + 1):
