@@ -20,5 +20,5 @@ while state_code != "":
         print("Invalid short state")
     state_code = input("Enter short state: ").upper()
 
-for key, value in CODE_TO_NAME.items():
-    print("{:<3} is {}".format(key, value))
+# for key, value in CODE_TO_NAME.items():
+#     print("{:<3} is {}".format(key, value))
