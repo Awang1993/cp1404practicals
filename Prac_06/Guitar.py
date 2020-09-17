@@ -18,7 +18,7 @@ class Guitar:
         self.cost = cost
 
     def guitar_str(self):
-        return "{} ({}) : ${:,.2f}".format(self.name, self.year, self.cost)
+        return "{:<20} ({}), worth $ {:10,.2f}".format(self.name, self.year, self.cost)
 
     def get_age(self):
         age = 2020 - self.year
