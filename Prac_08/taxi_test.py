@@ -7,7 +7,7 @@ from Prac_08.taxi import Taxi
 
 
 def main():
-    my_taxi = Taxi('Prius 1', 100, 1.23)
+    my_taxi = Taxi('Prius 1', 100)
     my_taxi.drive(40)
     print("Taxi = {}".format(my_taxi.name))
     print("Current fare = ${:.2f}".format(my_taxi.get_fare()))
