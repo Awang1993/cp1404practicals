@@ -3,7 +3,7 @@ CP1404 - Practicals
 Silver Service Taxi Test
 """
 
-from Prac_08.taxi import SilverServiceTaxi
+from Prac_08.silver_service_taxi import SilverServiceTaxi
 
 
 def main():

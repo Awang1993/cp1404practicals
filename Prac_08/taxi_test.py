@@ -18,9 +18,6 @@ def main():
     print("Current fare = ${:.2f}".format(my_taxi.get_fare()))
     print(Taxi.price_per_km)
 
-    print(SilverServiceTaxi.price_per_km)
-    my_silverservicetaxi = SilverServiceTaxi('YellowCab 1', )
-
 
 main()
 
