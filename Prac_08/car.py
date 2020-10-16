@@ -13,7 +13,7 @@ class Car:
         self.fuel = fuel
         self.odometer = 0
 
-    def specs(self):
+    def __str__(self):
         """Returns string for name, fuel, odometer"""
         return "{}, fuel={}, odometer={}".format(self.name, self.fuel, self.odometer)
 
