@@ -17,8 +17,9 @@ class SilverServiceTaxi(Taxi):
 
     def __str__(self):
         """Return a string like a Car but with flagfall added"""
-        return "{}, {}km on current fare, ${:.2f}/km plus flagfall of ${:.2f}"\
-            .format(super().__str__(), self.current_fare_distance, self.price_per_km, self.flagfall)
+        return "{}, plus flagfall of ${:.2f}"\
+            .format(super().__str__(),
+                    self.flagfall)
 
     def get_fare(self):
         """Return price for taxi trip with flagfall included"""
