@@ -4,7 +4,6 @@ Taxi Test
 """
 
 from Prac_08.taxi import Taxi
-from Prac_08.taxi import SilverServiceTaxi
 
 
 def main():
