@@ -2,6 +2,7 @@
 CP1404/CP5632 Practical
 Demos of various os module examples
 """
+
 import shutil
 import os
 
@@ -55,9 +56,7 @@ def demo_walk():
         print("\tand files:", filenames)
         print("(Current working directory is: {})".format(os.getcwd()))
 
-        for filename in filenames:
-            new_name = get_fixed_filename(filename)
-            print("Renaming {} to {}".format(filename, new_name))
+
 
 # main()
 demo_walk()
