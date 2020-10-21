@@ -9,36 +9,36 @@ import os
 
 def main():
     """Demo os module functions."""
+
+
     print("Starting directory is: {}".format(os.getcwd()))
 
     # Change to desired directory
-    os.chdir('Lyrics/Christmas')
+    os.chdir('Lyrics/Old')
 
     # Print a list of all files in current directory
     print("Files in {}:\n{}\n".format(os.getcwd(), os.listdir('.')))
 
-    # Make a new directory
-    # The next time you run this, it will crash if the directory exists
+    name = []
 
-    try:
-        os.mkdir('temp')
-    except FileExistsError:
-        pass
-
-    # Loop through each file in the (current) directory
+    for files in os.listdir('.'):
+        if " " not in files:
+            filenames = files.split('.')
+            string = filenames[0]
+            for character in enumerate(string):
+                if character[0] == 0 or character[1].islower():
+                    name.append(character[1])
+                if character[1].isupper() and character[0] != 0:
+                    name.append(" ")
+                    name.append(character[1])
+                filenames[0] = "".join(name)
+            name.clear()
+            new_file = filenames[0] + "." + filenames[1]
+            # print(new_file)
+            os.rename(files, new_file)
     for filename in os.listdir('.'):
-        # Ignore directories, just process files
-        if os.path.isdir(filename):
-            continue
-
         new_name = get_fixed_filename(filename)
-        print("Renaming {} to {}".format(filename, new_name))
-
-        # Option 1: rename file to new name - in place
-        # os.rename(filename, new_name)
-
-        # Option 2: move file to new place, with new name
-        # shutil.move(filename, 'temp/' + new_name)
+        os.rename(filename, new_name)
 
 
 def get_fixed_filename(filename):
@@ -58,5 +58,5 @@ def demo_walk():
 
 
 
-# main()
-demo_walk()
+main()
+# demo_walk()

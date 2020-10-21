@@ -49,8 +49,6 @@ def get_fixed_filename(filename):
 def demo_walk():
     """Process all subdirectories using os.walk()."""
 
-    path = 'D:/JCU/PycharmProjects/cp1404practicals/Prac_09/Lyrics'
-
     os.chdir('Lyrics/Christmas')
     for directory_name, subdirectories, filenames in os.walk('.'):
         print("Directory:", directory_name)
@@ -60,7 +58,15 @@ def demo_walk():
         for filename in os.listdir('.'):
             new_name = get_fixed_filename(filename)
             os.rename(filename, new_name)
-            # print(os.path.join(directory_name, filename))
+
 
 # main()
 demo_walk()
+
+# for character in enumerate(string):
+#     if character[1].isupper():
+#         if character[0] != 0:
+#             print(character)
+#             print(character[0])
+#             new_string = string[:character[0]] + " " + string[character[0]:]
+#             print(new_string)
