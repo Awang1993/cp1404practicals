@@ -17,9 +17,11 @@ def main():
 
     """Adds extension as a new item in the list if it does not exist"""
     for file in os.listdir('.'):
+        print(file)
         filename = file.split('.')
         try:
             os.mkdir(filename[1])
+            shutil.move(file, filename[1])
         except FileExistsError:
             shutil.move(file, filename[1])
         except IndexError:
