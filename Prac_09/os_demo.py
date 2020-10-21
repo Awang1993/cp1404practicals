@@ -51,16 +51,16 @@ def demo_walk():
 
     path = 'D:/JCU/PycharmProjects/cp1404practicals/Prac_09/Lyrics'
 
-    os.chdir('Lyrics/Sunday')
+    os.chdir('Lyrics/Christmas')
     for directory_name, subdirectories, filenames in os.walk('.'):
         print("Directory:", directory_name)
         print("\tcontains subdirectories:", subdirectories)
         print("\tand files:", filenames)
         print("(Current working directory is: {})".format(os.getcwd()))
-
         for filename in os.listdir('.'):
             new_name = get_fixed_filename(filename)
             os.rename(filename, new_name)
+            # print(os.path.join(directory_name, filename))
 
 # main()
 demo_walk()
